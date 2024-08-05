@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --background: #131614e6; /* Light grey background */
+    --secondaryBackground: hwb(231 53% 42% / 0.446); /* White background for containers */
+    --text: #ffffff; /* Dark grey text */
+    --primaryColor: #126da2e6; /* Bright coral for primary elements */
+    --secondaryColor: #18a1a4cf; /* Vibrant green for secondary elements */
+    --accentColor: #ffca28; /* Bright yellow for accents */
+    --inputBackground: #010a0acd; /* White background for inputs */
+    --buttonGradient: linear-gradient(135deg, #10a259, #188b95); /* Gradient for buttons */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: antiquewhite
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--secondaryBackground);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    width: 100%;
+    text-align: center;
+}
+
+.stats-container {
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    background-color: var(--inputBackground);
+}
+
+#progressBar {
+    width: 100%;
+    height: 15px;
+    background: var(--secondaryBackground);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+#progress {
+    width: 0%;
+    height: 15px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+form {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 16px;
+    background: var(--inputBackground);
+    
+    flex: 1;
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+button {
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--buttonGradient);
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(0);
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem {
+    display: flex;
+    background-color: var(--inputBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taskItem:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primaryColor);
+}
+
+.taskItem img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.taskItem img:hover {
+    transform: scale(1.2);
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: lightgreen;
+    font-style: italic;
+
+}
+
+.task.completed p {
+    text-decoration: line-through;
+    color: lightgreen;
+    font-style: italic;
+}
